@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
 @EnableEurekaClient
 public class ConfigServerApplication {
 
-
+    // http://localhost:8091/lisiService/dev
     private Environment evn;
     public static void main(String[] args) {
         SpringApplication.run(ConfigServerApplication.class, args);
