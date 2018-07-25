@@ -1,34 +1,3 @@
-#服务端口
-#server.port=8091
-#server.context-path=/wbyp
-#服务名称
-#spring.application.name=configServer
-#服务注册中心
-#eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
-#服务的git仓库地址
-#spring.cloud.config.server.git.uri=https://github.com/ztl123123/mirco.git
-#配置文件所在的目录
-#spring.cloud.config.server.git.search-paths=/**
-#配置文件所在的分支
-#spring.cloud.config.label=master
-#git仓库的用户名
-#spring.cloud.config.username=ztl123123
-#git仓库的密码
-#spring.cloud.config.password=92882072ztl123
-server:
-  port: 8091
 spring:
-  application:
-    name: configServer
-  cloud:
-    config:
-      server:
-        git:
-          # 配置git仓库的地址
-          uri: https://github.com/ztl123123/mirco.git
-           # git仓库地址下的相对地址，可以配置多个，用,分割。
-          search-paths: /config-demo1/src/main/resources/
-          username: ztl123123
-          # git仓库的账号
-          password: 92882072ztl123
-          # git仓库的密码
+  profiles:
+    active: dev
